@@ -7,8 +7,11 @@
   .slide {
     position: relative;
     display: flex;
+    height: 35rem;
     &-bg {
       position: relative;
+      display: flex;
+      flex: 1 1 auto;
       &:after {
         position: absolute;
         top: 0;
