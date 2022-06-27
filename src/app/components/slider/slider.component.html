@@ -1,6 +1,6 @@
-{{ items | json }}
+<pre>{{ items | json }}</pre>
 <div class="slider">
-  <div class="slide">
+  <div class="slide" *ngFor="let item of items">
     <div class="slide-bg">
       <img
         class="slide-bg-image"
@@ -9,7 +9,7 @@
       />
     </div>
     <div class="slide-pane">
-      <h2 class="name">Doctor Strange in the Multiverse of Madness</h2>
+      <h2 class="name">{{ item.title }}</h2>
       <div class="meta">
         <div class="info">
           <span class="rating">
