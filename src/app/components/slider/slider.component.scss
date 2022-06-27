@@ -1,0 +1,17 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35rem;
+  color: #999;
+  background-color: #000;
+  position: relative;
+  .slide {
+    &-bg {
+      &-image {
+      }
+    }
+    &-pane {
+    }
+  }
+}
