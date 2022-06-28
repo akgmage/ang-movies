@@ -4,7 +4,7 @@
     <div class="slide-bg">
       <img
         class="slide-bg-image"
-        src="https://image.tmdb.org/t/p/original/wcKFYIiVDvRURrzglV9kGu7fpfY.jpg"
+        [src]="'https://image.tmdb.org/t/p/original/' + item.backdrop_path"
         alt=""
       />
     </div>
@@ -14,16 +14,15 @@
         <div class="info">
           <span class="rating">
             <span class="app-icon">star</span
-            ><span class="rating-value">7.5</span><span>/10</span>
+            ><span class="rating-value">{{ item.vote_average }}</span
+            ><span>/10</span>
           </span>
-          <span>463 reviews</span>
-          <span>2021</span>
+          <span>{{ item.vote_count }}</span>
+          <span>{{ item.release_date | date: "yyyy" }}</span>
         </div>
       </div>
       <div class="desc mt-6">
-        Doctor Strange, with the help of mystical allies both old and new,
-        traverses the mind-bending and dangerous alternate realities of the
-        Multiverse to confront a mysterious new adversary
+        {{ item.overview }}
       </div>
     </div>
   </div>
