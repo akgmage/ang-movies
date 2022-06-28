@@ -5,6 +5,7 @@ import {
   transition,
   animate,
 } from '@angular/animations';
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 
@@ -29,7 +30,7 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
     setInterval(() => {
-      this.currentSlideIndex++;
+      this.currentSlideIndex = ++this.currentSlideIndex % this.items.length;
     }, 5000);
   }
 }
