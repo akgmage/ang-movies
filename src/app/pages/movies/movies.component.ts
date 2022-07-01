@@ -13,7 +13,7 @@ export class MoviesComponent implements OnInit {
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit(): void {
-    this.moviesService.getMovies('popular', 20).subscribe((movies) => {
+    this.moviesService.searchMovies(2).subscribe((movies) => {
       this.movies = movies;
     });
   }
