@@ -17,4 +17,7 @@ export class MoviesComponent implements OnInit {
       this.movies = movies;
     });
   }
+  paginate(event: any) {
+    console.log(event);
+  }
 }
