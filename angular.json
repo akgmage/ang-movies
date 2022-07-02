@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "ang-movies"
+  "cli": {
+    "analytics": "953f29f3-08be-4681-9d0a-a44352e22ee9"
+  }
 }
