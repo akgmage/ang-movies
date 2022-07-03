@@ -10,8 +10,8 @@ export class MovieComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      console.log(params);
+    this.route.params.subscribe(({ id }) => {
+      console.log(id);
     });
   }
 }
