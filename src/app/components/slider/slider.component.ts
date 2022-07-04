@@ -24,15 +24,17 @@ import { Movie } from 'src/app/models/movie';
 })
 export class SliderComponent implements OnInit {
   @Input() items: Movie[] = [];
-
+  @Input() isBanner: boolean = false;
   readonly imagesSizes = IMAGES_SIZES;
   currentSlideIndex: number = 0;
 
   constructor() {}
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.currentSlideIndex = ++this.currentSlideIndex % this.items.length;
-    }, 5000);
+    if (!this.isBanner) {
+      setInterval(() => {
+        this.currentSlideIndex = ++this.currentSlideIndex % this.items.length;
+      }, 5000);
+    }
   }
 }
