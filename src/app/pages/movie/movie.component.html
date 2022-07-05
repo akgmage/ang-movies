@@ -41,6 +41,14 @@
               {{ movie.status }}
             </div>
           </div>
+          <div class="stat">
+            <div class="label">Genres:</div>
+            <div class="value">
+              <span *ngFor="let genre of movie.genres">
+                {{ genre.name }}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </p-tabPanel>
