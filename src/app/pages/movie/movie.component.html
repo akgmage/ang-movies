@@ -13,6 +13,12 @@
         <div class="col-12 md:col-9 lg:col-9">
           <h2>Overview</h2>
           <p class="overview">{{ movie.overview }}</p>
+          <div class="stat">
+            <div class="label">Release Date:</div>
+            <div class="value">
+              {{ movie.release_date | date: "dd.MM.yyyy" }}
+            </div>
+          </div>
         </div>
       </div>
     </p-tabPanel>
