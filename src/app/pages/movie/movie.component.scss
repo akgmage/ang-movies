@@ -20,3 +20,13 @@
 .overview {
   line-height: 1.5;
 }
+.stat {
+  display: flex;
+  .label {
+    width: 150px;
+    font-weight: bold;
+  }
+  .value {
+    color: $primaryColor;
+  }
+}
