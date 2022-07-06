@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-video-embed',
+  selector: 'video-embed',
   templateUrl: './video-embed.component.html',
-  styleUrls: ['./video-embed.component.scss']
+  styleUrls: ['./video-embed.component.scss'],
 })
 export class VideoEmbedComponent implements OnInit {
+  @Input() site: string = 'Youtube';
+  @Input() key: string | null = null;
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  getSafeUrl(url: string) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
-
 }
