@@ -16,6 +16,7 @@ import { AdditiveComponent } from './additive/additive.component';
 import { PaginatorModule } from 'primeng/paginator';
 import { MovieComponent } from './pages/movie/movie.component';
 import { TabViewModule } from 'primeng/tabview';
+import { VideoEmbedComponent } from './components/video-embed/video-embed.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { TabViewModule } from 'primeng/tabview';
     ItemComponent,
     AdditiveComponent,
     MovieComponent,
+    VideoEmbedComponent,
   ],
   imports: [
     BrowserModule,
