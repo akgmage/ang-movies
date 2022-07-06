@@ -53,10 +53,12 @@
       </div>
     </p-tabPanel>
     <p-tabPanel header="Videos">
-      <pre>
-        {{ movieVideos | json }}
-        
-      </pre>
+      <ng-container *ngFor="let movieVideo of movieVideos">
+        <video-embed
+          [key]="movieVideo.key"
+          [site]="movieVideo.site"
+        ></video-embed>
+      </ng-container>
     </p-tabPanel>
     <p-tabPanel header="Photos"> Content 3 </p-tabPanel>
   </p-tabView>
