@@ -79,7 +79,11 @@
       </div>
     </p-tabPanel>
   </p-tabView>
-  <p-carousel *ngIf="movieCredits" [value]="movieCredits.cast">
-    <ng-template let-car pTemplate="item"> Content to display </ng-template>
+  <p-carousel [numVisible]="5" *ngIf="movieCredits" [value]="movieCredits.cast">
+    <ng-template let-actor pTemplate="item">
+      <div class="actor">
+        <img [src]="imagesSizes.medium + actor.profile_path" alt="" />
+      </div>
+    </ng-template>
   </p-carousel>
 </ng-container>
