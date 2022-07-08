@@ -53,7 +53,7 @@ export class MoviesService {
         })
       );
   }
-  getMovieGenres() {
+  getMoviesGenres() {
     return this.http
       .get<GenresDto>(`${this.baseUrl}/genre/movie/?api_key=${this.apiKey}`)
       .pipe(
