@@ -31,7 +31,11 @@ export class MoviesComponent implements OnInit {
       this.movies = movies;
     });
   }
-  getMoviesByGenre(genreId: string) {}
+  getMoviesByGenre(genreId: string) {
+    this.moviesService.getMoviesByGenre(genreId).subscribe((movies) => {
+      this.movies = movies;
+    });
+  }
   paginate(event: any) {
     this.getPagedMovies(event.page + 1);
   }
