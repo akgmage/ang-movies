@@ -62,6 +62,17 @@ export class MoviesService {
         })
       );
   }
+  getMoviesByGenre(genreId: string) {
+    return this.http
+      .get<MovieDto>(
+        `${this.baseUrl}/discover/movie?with_genres=${genreId}&api_key=${this.apiKey}`
+      )
+      .pipe(
+        switchMap((res) => {
+          return of(res.results);
+        })
+      );
+  }
 
   getMovieImages(id: string) {
     return this.http.get<MovieImages>(
