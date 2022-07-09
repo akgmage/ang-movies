@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'movie/:id', component: MovieComponent },
+  { path: 'movies/genres/:genreId', component: MovieComponent },
   { path: 'genres', component: GenresComponent },
   { path: '**', redirectTo: '' },
 ];
